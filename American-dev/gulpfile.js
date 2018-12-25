@@ -19,8 +19,15 @@ var server=require('gulp-webserver');
                    port:9090,
                    proxies:[
                        {
-                           source:'/api/icon',target:'http://127.0.0.1/api/icon'
+                           source:'/api/icon',target:'http://127.0.0.1:3000/api/icon'
+                       },
+                         {
+                           source:'/api/list',target:'http://127.0.0.1:3000/api/list'
+                       },
+                        {
+                           source:'/api/nav',target:'http://127.0.0.1:3000/api/nav'
                        }
+
                    ]
                }))
     })
