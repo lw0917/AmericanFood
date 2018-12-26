@@ -7,12 +7,14 @@ require(['./js/main.js'],function(){
              renderSwiper();
             //初始化swiper
             var sw=new swiper('.banner',{
-                loop:true,
-                autoplay:true,
-                pagination:{
-                    el:'.swiper-pagination'
-                }
-            });
+                    loop:true,
+                    autoplay:true,
+                    pagination:{
+                        el:'.swiper-pagination'
+                    },
+                    observer: true, //修改swiper自己或子元素时，自动初始化swiper
+                    observeParents: true //修改swiper的父元素时，自动初始化swiper
+                });
             renderNav();
         var scrollNav=new bscroll('.nav',{
             scrollX:true,
@@ -47,6 +49,15 @@ require(['./js/main.js'],function(){
                               str+=`</div>`;
                          }
                          $('.swiper-wrapper').html(str);
+                        //  var sw=new swiper('.banner',{
+                        //     loop:true,
+                        //     autoplay:true,
+                        //     pagination:{
+                        //         el:'.swiper-pagination'
+                        //     },
+                        //     observer: true, //修改swiper自己或子元素时，自动初始化swiper
+                        //     observeParents: true //修改swiper的父元素时，自动初始化swiper
+                        // });
                       }
                   }
               })
