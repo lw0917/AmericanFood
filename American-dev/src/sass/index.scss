@@ -5,4 +5,148 @@
     height:100%;
     @include box_flex;
     @include direction(column);
+    padding:0 pxTorem(15px);
+    box-sizing:border-box;
+}
+header{
+    width:100%;
+    height:pxTorem(100px);
+    @include box_flex;
+    @include direction(column);
+    @include justify(space-between);
+    .head{
+        width:100%;
+        height:pxTorem(44px);
+        font-size:pxTorem(20px);
+        @include box_flex;
+        @include justify(space-between);
+        @include align;
+        img{
+            width:pxTorem(80px);
+            height:pxTorem(30px); 
+            border-radius:pxTorem(15px);
+        }
+    }
+    .search{
+        width:100%;
+        height:pxTorem(44px);
+        background:#ccc;
+        border-radius:pxTorem(15px);
+        img{
+            width:pxTorem(30px);
+            height:pxTorem(30px); 
+            margin-right:pxTorem(10px);
+        }
+        padding:0 pxTorem(15px);
+        box-sizing:border-box;
+        @include box_flex;
+        @include justify(space-between);
+        @include align;
+        input{
+            flex:1;
+        }
+    }
+    
+}
+section{ 
+        flex:1;
+        @include box_flex;
+        @include direction(column);
+        .banner{
+            width:100%;
+            margin:pxTorem(20px) 0;
+            height:pxTorem(150px);
+            overflow: hidden;
+            .swiper-wrapper{
+                .swiper-slide{
+                    width:100%;
+                    height:100%;
+                    @include box_flex;
+                    flex-wrap:wrap;
+                    dl{
+                        width:25%;
+                        height:pxTorem(70px);
+                        @include box_flex;
+                        @include justify(center);
+                        @include direction(column);
+                        @include align;
+                        text-align:center;
+                        img{
+                            width:pxTorem(30px);
+                            height:pxTorem(30px);
+                        }
+                    }
+              }
+            }  
+        }
+        .nav{
+            width:100%;
+            height:pxTorem(150px);
+            display:flex;
+            overflow:hidden;
+            .nav-con{
+                display:flex;
+                div{
+                    width:pxTorem(100px);
+                    display:inline-block;
+                    height:100%;
+                    margin:0 pxTorem(10px);
+                    img{
+                        width:100%;
+                        height:pxTorem(100px);
+                    }
+                    p{
+                        line-height:pxTorem(20px)
+                    }
+                    span{
+                        display:block;
+                        font-size:pxTorem(20px);
+                        font-weight:bold;
+                        color:red;
+                    }
+                }
+            }
+        }
+        .list{
+            flex:1;
+            overflow: hidden;
+            .list-con{
+                @include box_flex;
+                @include direction(column);
+                .content{
+                width:100%;
+                height:pxTorem(100px);
+                margin:pxTorem(10px) 0;
+                background:#efefef;
+                @include box_flex;
+                @include align;
+                img{
+                    width:pxTorem(80px);
+                    height:pxTorem(80px);
+                    margin-right:pxTorem(10px);
+                }
+                p{
+                    flex:1;
+                }
+                .right{
+                    width:pxTorem(100px);
+                    height:100%;
+                    margin-left:pxTorem(10px);
+                }
+              }
+            }
+            
+        }
+}
+footer{
+    width:100%;
+    height:pxTorem(50px);
+    @include box_flex;
+    @include justify(space-around);
+    @include align;
+    text-align:center;
+    img{
+        width:pxTorem(30px);
+        height:pxTorem(30px);
+    }
 }
